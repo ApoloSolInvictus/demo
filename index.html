@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Delphos: El Oráculo Digital</title>
+
+    <!-- Librerías Externas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Locales -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-brand-dark">Delphos<span class="text-brand-accent">.IA</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#problem" class="nav-link text-brand-light hover:text-brand-accent">El Problema</a>
+                <a href="#solution" class="nav-link text-brand-light hover:text-brand-accent">La Solución</a>
+                <a href="#impact" class="nav-link text-brand-light hover:text-brand-accent">El Impacto</a>
+                <a href="#vision" class="nav-link text-brand-light hover:text-brand-accent">La Visión</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="hero" class="relative text-center py-24 md:py-32 overflow-hidden">
+            <div class="container mx-auto px-6 z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-brand-dark">El fin de las filas.</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-brand-light">
+                    Presentamos el Oráculo Digital: una revolución en los servicios cívicos que disuelve la burocracia y devuelve el tiempo a los ciudadanos, directamente desde los parques de Costa Rica.
+                </p>
+                <a href="#problem" class="mt-8 inline-block bg-brand-accent text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-brand-accent-dark transition-transform transform hover:scale-105">Descubra cómo</a>
+            </div>
+        </section>
+
+        <!-- Section 2: The Problem -->
+        <section id="problem" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <span class="text-sm font-bold uppercase tracking-wider text-brand-accent">El Problema</span>
+                    <h2 class="section-title mt-2">Una Ciudad Atrapada en el Tráfico</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-brand-light">La congestión vehicular, impulsada por la centralización de servicios, no solo cuesta dinero; nos roba tiempo y calidad de vida. El dato es contundente.</p>
+                </div>
+                <div class="fade-in mt-12 bg-slate-100 p-8 rounded-xl max-w-4xl mx-auto text-center">
+                    <p class="text-xl text-brand-light">Según el Índice de Tráfico 2025 de Numbeo, San José es la</p>
+                    <div id="traffic-rank" class="my-4 text-8xl md:text-9xl font-extrabold text-brand-dark" data-rank="2">#1</div>
+                    <p class="text-xl text-brand-light">ciudad más congestionada del mundo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Solution -->
+        <section id="solution" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <span class="text-sm font-bold uppercase tracking-wider text-brand-accent">La Solución</span>
+                    <h2 class="section-title mt-2">La Estación Oráculo y su Avatar Personal</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-brand-light">Una fusión de arquitectura sostenible y IA conversacional que lleva cualquier trámite al parque de su comunidad. Así es como funciona.</p>
+                </div>
+
+                <div class="fade-in mt-16 max-w-5xl mx-auto relative flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-8">
+                    <!-- Nodes -->
+                    <div id="node-citizen" class="diagram-node bg-white p-4 rounded-lg shadow-md text-center w-48">
+                        <div class="text-4xl">👤</div>
+                        <p class="mt-2 font-bold">1. Ciudadano</p>
+                        <p class="text-xs text-slate-500">Inicia la interacción en el parque.</p>
+                    </div>
+                    <div id="node-station" class="diagram-node bg-white p-4 rounded-lg shadow-md text-center w-48">
+                        <div class="text-4xl">🏛️</div>
+                        <p class="mt-2 font-bold">2. Estación Oráculo</p>
+                        <p class="text-xs text-slate-500">Quiosco sostenible con pantalla y audio.</p>
+                    </div>
+                    <div id="node-avatar" class="diagram-node bg-white p-4 rounded-lg shadow-md text-center w-48">
+                        <div class="text-4xl">🤖</div>
+                        <p class="mt-2 font-bold">3. Avatar Personal</p>
+                        <p class="text-xs text-slate-500">Su agente de IA personal lo asiste.</p>
+                    </div>
+                    <div id="node-services" class="diagram-node bg-white p-4 rounded-lg shadow-md text-center w-48">
+                        <div class="text-4xl">🌐</div>
+                        <p class="mt-2 font-bold">4. Servicios</p>
+                        <p class="text-xs text-slate-500">Resuelve trámites públicos y privados.</p>
+                    </div>
+
+                    <!-- Connectors - Positions adjusted in JS -->
+                    <div id="connector1" class="diagram-connector"></div>
+                    <div id="connector2" class="diagram-connector"></div>
+                    <div id="connector3" class="diagram-connector"></div>
+                </div>
+                
+                <div class="mt-16 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="fade-in">
+                        <h3 class="text-3xl font-bold text-brand-dark">Diseño Sostenible e Inteligente</h3>
+                        <p class="mt-4 text-brand-light">Cada "Estación Oráculo" está diseñada para ser un ejemplo de sostenibilidad. Se integra en muros existentes, minimizando el impacto constructivo. Su techo combina **paneles solares** que la hacen energéticamente autosuficiente y un **techo verde** que brinda aislamiento térmico. Paneles de vidrio crean un espacio de interacción cómodo y privado.</p>
+                    </div>
+                     <div class="fade-in">
+                        <h3 class="text-3xl font-bold text-brand-dark">Su Agente Personal, Su Identidad</h3>
+                        <p class="mt-4 text-brand-light">La magia reside en el **Avatar Personal**, una réplica digital creada con la tecnología de **Tavus IA**. Basado en un modelo de **Identidad Digital Soberana (SSI)**, usted es el único dueño de su identidad. Su avatar actúa como su agente, accediendo a la información de diferentes instituciones solo con su consentimiento explícito para cada trámite.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Section 4: The Impact -->
+        <section id="impact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <span class="text-sm font-bold uppercase tracking-wider text-brand-accent">El Impacto</span>
+                    <h2 class="section-title mt-2">De la Congestión a la Conversación</h2>
+                    <p class="mt-4 max-w-3xl mx-auto text-lg text-brand-light">Al descentralizar los servicios y digitalizar la burocracia, el impacto en la eficiencia y calidad de vida de la ciudad es transformador.</p>
+                </div>
+                <div class="fade-in mt-12 max-w-4xl mx-auto">
+                     <div class="chart-container h-[400px] md:h-[500px]">
+                        <canvas id="impactChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Vision -->
+        <section id="vision" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                 <span class="text-sm font-bold uppercase tracking-wider text-brand-accent">La Visión</span>
+                <h2 class="section-title mt-2">La Primera Ciudad Conversacional del Mundo</h2>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-brand-light">
+                   El Proyecto Delphos no se trata de instalar pantallas; se trata de cambiar la conversación. Es crear un nuevo contrato social digital donde el Estado y las empresas sirven al ciudadano de manera instantánea, transparente y humana. Es convertir a San José en un referente mundial de innovación cívica.
+                </p>
+                <div class="fade-in mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-brand-dark">Empoderamiento Ciudadano</h3>
+                        <p class="mt-2 text-sm text-brand-light">El ciudadano recupera el control de sus datos y su tiempo.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-brand-dark">Sostenibilidad Urbana</h3>
+                        <p class="mt-2 text-sm text-brand-light">Menos tráfico, menos emisiones, y una infraestructura más eficiente.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-brand-dark">Gobierno como Servicio</h3>
+                        <p class="mt-2 text-sm text-brand-light">Una administración pública ágil, accesible y centrada en las personas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-brand-dark text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+             <p class="font-bold text-lg">Proyecto Delphos.IA</p>
+             <p class="text-sm text-slate-300 mt-1">El futuro del servicio cívico es una conversación.</p>
+        </div>
+    </footer>
+
+    <!-- Elemento de Audio (Oculto) -->
+    <!-- IMPORTANTE: Cambia 'audio/tu-archivo.mp3' por la ruta a tu archivo de audio en GitHub -->
+    <audio id="audio-player" src="audio/tu-archivo.mp3"></audio>
+
+    <!-- Botón Flotante para el Audio -->
+    <button id="audio-toggle-button" class="audio-button">
+        <span id="audio-icon">
+            <!-- El ícono se cambiará con JavaScript -->
+        </span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

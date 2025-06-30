@@ -1,0 +1,57 @@
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; /* slate-50 */ }
+.text-brand-dark { color: #1e3a8a; } /* blue-900 */
+.text-brand-light { color: #334155; } /* slate-700 */
+.bg-brand-accent { background-color: #0d9488; } /* teal-600 */
+.hover\:bg-brand-accent-dark:hover { background-color: #0f766e; } /* teal-700 */
+.section-title { font-size: 2.5rem; line-height: 1.1; font-weight: 800; color: #1e293b; /* slate-800 */ }
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.nav-link.active { color: #0d9488; font-weight: 700; }
+.nav-link { transition: color 0.2s; }
+.diagram-node { transition: all 0.3s ease; }
+.diagram-node.active { transform: scale(1.05); box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.4); }
+.diagram-connector {
+    position: absolute;
+    height: 2px;
+    background-color: #94a3b8; /* slate-400 */
+    transform-origin: left;
+    transition: transform 0.5s ease-out;
+    transform: scaleX(0);
+}
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 500px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Estilos para el Botón de Audio Flotante */
+.audio-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0d9488; /* teal-600 */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.audio-button:hover {
+    background-color: #0f766e; /* teal-700 */
+    transform: scale(1.1);
+}
+
+.audio-button svg {
+    width: 28px;
+    height: 28px;
+}
